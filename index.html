@@ -914,4 +914,338 @@
                 category: "IMPROBIDADE"
             },
             {
-                question: "⚖️ 'A posse em cargo público exige a
+                question: "⚖️ 'A posse em cargo público exige a apresentação de declaração de bens e valores.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 1,
+                category: "LEI 8.112"
+            },
+            {
+                question: "💻 'O protocolo HTTPS garante a criptografia dos dados transmitidos na internet.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 1,
+                category: "INFORMÁTICA"
+            },
+            {
+                question: "💻 'O firewall é um dispositivo de hardware ou software que controla o tráfego de rede.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 1,
+                category: "INFORMÁTICA"
+            },
+            {
+                question: "🏛️ 'A administração pública direta compreende os órgãos integrantes da estrutura dos poderes da União, Estados e Municípios.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 1,
+                category: "ADMINISTRAÇÃO"
+            },
+            {
+                question: "🏛️ 'A descentralização administrativa ocorre quando a administração pública distribui competências dentro da mesma pessoa jurídica.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 2,
+                category: "ADMINISTRAÇÃO"
+            },
+            {
+                question: "📑 'Na licitação, o princípio da vinculação ao instrumento convocatório impede que o edital seja alterado após a publicação.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 2,
+                category: "LICITAÇÕES"
+            },
+            {
+                question: "📑 'O pregão é modalidade de licitação para aquisição de bens e serviços comuns, independentemente do valor.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 1,
+                category: "LICITAÇÕES"
+            },
+            {
+                question: "🔒 'A segurança privada pode ser exercida por vigilantes, supervisores e chefes de equipe.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 1,
+                category: "SEGURANÇA"
+            },
+            {
+                question: "🔬 'A Lei 10.357/2001 dispõe sobre o controle de produtos químicos que podem ser utilizados na produção de drogas.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 1,
+                category: "PRODUTOS QUÍMICOS"
+            },
+            {
+                question: "🌎 'A Lei de Migração (13.445/2017) garante ao imigrante direitos e deveres similares aos do brasileiro.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 1,
+                category: "LEI DE MIGRAÇÃO"
+            },
+            {
+                question: "🔫 'O Sistema Nacional de Armas (SINARM) é vinculado à Polícia Federal.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 1,
+                category: "ARMAS"
+            },
+            {
+                question: "📊 'Em probabilidade, eventos mutuamente exclusivos não podem ocorrer simultaneamente.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 1,
+                category: "RACIOCÍNIO LÓGICO"
+            },
+            {
+                question: "📝 'A palavra 'pessimista' é um adjetivo e pode ser flexionada em gênero e número.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 1,
+                category: "PORTUGUÊS"
+            },
+            {
+                question: "⚖️ 'A comissão de ética pode aplicar a penalidade de censura ao servidor público.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 1,
+                category: "ÉTICA"
+            },
+            {
+                question: "📋 'O servidor público estável pode perder o cargo mediante processo administrativo disciplinar.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 1,
+                category: "LEI 8.112"
+            },
+            {
+                question: "💻 'No Excel, a função PROCV procura um valor na primeira coluna de uma tabela e retorna outro na mesma linha.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 1,
+                category: "INFORMÁTICA"
+            },
+            {
+                question: "🏛️ 'A governança pública envolve liderança, estratégia e controle.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 1,
+                category: "GESTÃO"
+            },
+            {
+                question: "📦 'O método PEPS (primeiro que entra, primeiro que sai) é um critério de avaliação de estoques.'",
+                options: ["CERTO", "ERRADO"],
+                answer: 1,
+                category: "LOGÍSTICA"
+            }
+        ];
+
+        const TOTAL_QUESTIONS = questions.length;
+        let current = 0;
+        let score = 0;
+        let answered = false;
+        let userAnswers = [];
+        let timer;
+        let timeLeft = 70;
+
+        function startTimer() {
+            clearInterval(timer);
+            timeLeft = 70;
+            updateTimerDisplay();
+            
+            timer = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    if (!answered) {
+                        userAnswers.push(0);
+                        nextQuestion();
+                    }
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const timerEl = document.getElementById('timer');
+            if (timerEl) timerEl.textContent = `⏳ ${timeLeft}s`;
+        }
+
+        function showQuestion() {
+            answered = false;
+            const q = questions[current];
+            
+            let html = `
+                <div class="quiz-header">
+                    <div class="quiz-title">PF - AGENTE ADMINISTRATIVO 2025</div>
+                    <div class="quiz-subtitle">SIMULADO CEBRASPE (C/E)</div>
+                    
+                    <div class="progress-container">
+                        <div class="question-counter">${current + 1}/${TOTAL_QUESTIONS}</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${((current + 1) / TOTAL_QUESTIONS) * 100}%"></div>
+                        </div>
+                        <div class="category-badge">${q.category}</div>
+                    </div>
+                    
+                    <div class="timer-container">
+                        <div class="timer" id="timer">⏳ 70s</div>
+                    </div>
+                </div>
+                
+                <div class="question-area">
+                    <div class="question-text">${q.question}</div>
+                </div>
+                
+                <div class="options-container" id="optionsContainer">
+                    <button class="option-btn-ce" onclick="selectOption(1)" id="btn-c">C - CERTO</button>
+                    <button class="option-btn-ce" onclick="selectOption(2)" id="btn-e">E - ERRADO</button>
+                </div>
+            `;
+            
+            document.getElementById('quizContent').innerHTML = html;
+            startTimer();
+        }
+
+        function selectOption(selected) {
+            if (answered) return;
+            answered = true;
+            clearInterval(timer);
+            
+            const correct = questions[current].answer;
+            const btnC = document.getElementById('btn-c');
+            const btnE = document.getElementById('btn-e');
+            
+            btnC.classList.remove('selected-c', 'correct-c', 'incorrect-c');
+            btnE.classList.remove('selected-e', 'correct-e', 'incorrect-e');
+            
+            if (selected === 1) {
+                btnC.classList.add('selected-c');
+            } else {
+                btnE.classList.add('selected-e');
+            }
+            
+            setTimeout(() => {
+                if (correct === 1) {
+                    btnC.classList.add('correct-c');
+                    if (selected !== 1) btnE.classList.add('incorrect-e');
+                } else {
+                    btnE.classList.add('correct-e');
+                    if (selected !== 2) btnC.classList.add('incorrect-c');
+                }
+                
+                btnC.disabled = true;
+                btnE.disabled = true;
+                
+                userAnswers.push(selected);
+                if (selected === correct) {
+                    score++;
+                    if (typeof confetti !== 'undefined') {
+                        confetti({
+                            particleCount: 20,
+                            spread: 40,
+                            colors: ['#0b2b3d', '#ffcc00']
+                        });
+                    }
+                }
+                
+                setTimeout(nextQuestion, 800);
+            }, 300);
+        }
+
+        function nextQuestion() {
+            current++;
+            if (current < questions.length) {
+                showQuestion();
+            } else {
+                showFinalScreen();
+            }
+        }
+
+        function showFinalScreen() {
+            let levelMessage = "";
+            let levelEmoji = "";
+            
+            if (score >= 100) {
+                levelMessage = "APROVADO - Excelente desempenho! 🌟";
+                levelEmoji = "🏆";
+                if (typeof confetti !== 'undefined') {
+                    confetti({ particleCount: 200, spread: 120, colors: ['#0b2b3d', '#ffcc00'] });
+                }
+            } else if (score >= 80) {
+                levelMessage = "CLASSIFICADO - Muito bem! 👍";
+                levelEmoji = "📚";
+                if (typeof confetti !== 'undefined') {
+                    confetti({ particleCount: 100, spread: 80, colors: ['#ffcc00'] });
+                }
+            } else if (score >= 60) {
+                levelMessage = "HABILITADO - Bom desempenho! 💪";
+                levelEmoji = "📝";
+            } else {
+                levelMessage = "ESTUDE MAIS - Continue praticando! 📖";
+                levelEmoji = "📖";
+            }
+            
+            let acertos = score;
+            let erros = TOTAL_QUESTIONS - score;
+            
+            let html = `
+                <div class="quiz-header">
+                    <div class="quiz-title">PF - AGENTE ADMINISTRATIVO</div>
+                    <div class="quiz-subtitle">RESULTADO FINAL</div>
+                </div>
+                
+                <div class="result-screen">
+                    <div class="final-score">
+                        <div class="score-label">Acertos</div>
+                        <div class="score-number">${acertos}/${TOTAL_QUESTIONS}</div>
+                        <div class="stats-container">
+                            <span class="stats-correct">✅ ${acertos} corretas</span>
+                            <span class="stats-wrong">❌ ${erros} incorretas</span>
+                        </div>
+                        <div class="level-result">${levelEmoji} ${levelMessage}</div>
+                    </div>
+                    
+                    <button class="action-btn" onclick="redirectToResultados()">
+                        🔗 VER GABARITO COMPLETO
+                    </button>
+                    
+                    <button class="action-btn secondary" onclick="redirectToConcurso()">
+                        🚀 MAIS SIMULADOS
+                    </button>
+                    
+                    <input type="text" class="name-input" id="participantName" 
+                           placeholder="Digite seu nome">
+                    <button class="action-btn secondary" onclick="sendResults()">
+                        💾 SALVAR RESULTADO
+                    </button>
+                </div>
+            `;
+            
+            document.getElementById('quizContent').innerHTML = html;
+        }
+
+        function redirectToResultados() {
+            window.open(CONCURSO_LINK, '_blank');
+        }
+
+        function redirectToConcurso() {
+            window.open(CONCURSO_LINK, '_blank');
+        }
+
+        function sendResults() {
+            const name = document.getElementById('participantName')?.value.trim();
+            if (!name) {
+                alert('Por favor, digite seu nome!');
+                return;
+            }
+            
+            document.getElementById('loading').style.display = 'flex';
+            
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+                alert(`Parabéns ${name}! Você acertou ${score}/${TOTAL_QUESTIONS} questões.`);
+            }, 1000);
+        }
+
+        function loadConfettiAndStart() {
+            if (typeof confetti === 'undefined') {
+                const script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js';
+                script.onload = function() {
+                    showQuestion();
+                };
+                document.head.appendChild(script);
+            } else {
+                showQuestion();
+            }
+        }
+
+        loadConfettiAndStart();
+    </script>
+</body>
+</html>
