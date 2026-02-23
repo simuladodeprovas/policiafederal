@@ -399,7 +399,6 @@
         const RESULTADOS_LINK = CONCURSO_LINK;
 
         // ===== 120 QUESTÕES ESTILO CEBRASPE (CERTO/ERRADO) =====
-        // Baseado no PDF do concurso PF - Agente Administrativo 2025
         const questions = [
             // LÍNGUA PORTUGUESA (1-18)
             {
@@ -417,31 +416,31 @@
             {
                 question: "📝 'Nas comunicações oficiais, deve-se evitar o emprego de palavras e expressões simples, assim como o de frases curtas.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO (deve-se usar linguagem clara e objetiva)
+                answer: 2,
                 category: "PORTUGUÊS"
             },
             {
                 question: "📝 'No corpo do texto de uma correspondência oficial, os pronomes de tratamento podem ser empregados em sua forma abreviada ou por extenso.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "PORTUGUÊS"
             },
             {
                 question: "📝 'A proposição P: 'Não quero debate, mas não tenho receio de debater' tem tabela-verdade com mais de 5 linhas.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO (tem 4 linhas)
+                answer: 2,
                 category: "RACIOCÍNIO LÓGICO"
             },
             {
                 question: "📝 'A proposição P é equivalente à negação de 'Se não quero debate, então tenho receio de debater.''",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "RACIOCÍNIO LÓGICO"
             },
             {
                 question: "📝 ''Não quero debate' é condição suficiente para a veracidade da proposição P.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO
+                answer: 2,
                 category: "RACIOCÍNIO LÓGICO"
             },
             
@@ -449,19 +448,19 @@
             {
                 question: "📊 'Em uma entrevista com 60 pessoas, 17 gostam de dirigir e 53 sentem nervosismo. Se uma pessoa for escolhida aleatoriamente, a probabilidade de ela gostar de dirigir é superior a 1/4.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO (17/60 ≈ 0,283 > 0,25)
+                answer: 1,
                 category: "ESTATÍSTICA"
             },
             {
                 question: "📊 'Pelo menos 10 entre as pessoas entrevistadas informaram tanto gostar de dirigir quanto sentir nervosismo ao dirigir.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO (pela interseção dos conjuntos)
+                answer: 1,
                 category: "ESTATÍSTICA"
             },
             {
                 question: "📊 'Não há, entre as pessoas entrevistadas, quem tenha informado que não gosta de dirigir e que não sente nervosismo ao dirigir.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO
+                answer: 2,
                 category: "ESTATÍSTICA"
             },
             
@@ -469,31 +468,31 @@
             {
                 question: "⚖️ 'Advertência, suspensão e demissão são penas aplicáveis ao servidor público pela comissão de ética.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO (comissão de ética aplica censura)
+                answer: 2,
                 category: "ÉTICA"
             },
             {
                 question: "⚖️ 'O Código de Ética estabelece como dever do servidor a imediata comunicação a seus superiores de qualquer ato contrário ao interesse público.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO (Decreto 1.171/1994)
+                answer: 1,
                 category: "ÉTICA"
             },
             {
                 question: "⚖️ 'Ao servidor público é defeso ser conveniente com condutas imorais, ilegais ou aéticas, mesmo por espírito de solidariedade.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "ÉTICA"
             },
             {
                 question: "⚖️ 'A moralidade é princípio que rege a atuação da administração pública.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO (art. 37, CF)
+                answer: 1,
                 category: "ÉTICA"
             },
             {
                 question: "⚖️ 'A função pública é segregada da vida particular do servidor, razão pela qual fatos da vida privada não interferem na vida funcional.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO
+                answer: 2,
                 category: "ÉTICA"
             },
             
@@ -501,19 +500,19 @@
             {
                 question: "📋 'A restituição de indenizações pagas por danos causados por ato doloso do servidor será preferencialmente mediante desconto em sua remuneração.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "LEI 8.112"
             },
             {
                 question: "📋 'A penalidade de suspensão não pode exceder o prazo de 90 dias.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "LEI 8.112"
             },
             {
                 question: "📋 'Zelar pela economia do material utilizado no exercício de suas funções é dever do servidor público.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "LEI 8.112"
             },
             
@@ -521,19 +520,19 @@
             {
                 question: "⚖️ 'A voluntariedade do agente é condição insuficiente para caracterizar o dolo na improbidade administrativa.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "IMPROBIDADE"
             },
             {
                 question: "⚖️ 'A ocorrência de lesão ao patrimônio público é indispensável para caracterizar conflito de interesses.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO
+                answer: 2,
                 category: "IMPROBIDADE"
             },
             {
                 question: "⚖️ 'A declaração de imposto de renda é exigida para posse e exercício em cargo público.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "IMPROBIDADE"
             },
             
@@ -541,55 +540,55 @@
             {
                 question: "💻 'LAN é uma rede restrita a um único ambiente físico, como escritório ou escola.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "INFORMÁTICA"
             },
             {
                 question: "💻 'No Windows 10, o recurso Visão de Tarefas permite visualizar tarefas em segundo plano do Gerenciador de Tarefas.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO
+                answer: 2,
                 category: "INFORMÁTICA"
             },
             {
                 question: "💻 'Endereço IP é o protocolo responsável pela conversão de nomes de domínio em endereços físicos.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO (é o DNS)
+                answer: 2,
                 category: "INFORMÁTICA"
             },
             {
                 question: "💻 'No Excel, a fórmula =CONT.SE(A2:A200;'furto') conta quantas vezes 'furto' aparece no intervalo.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "INFORMÁTICA"
             },
             {
                 question: "💻 'No Excel, critérios com símbolos lógicos na função SOMASE devem estar entre aspas duplas.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "INFORMÁTICA"
             },
             {
                 question: "💻 'No armazenamento em nuvem, a escalabilidade de recursos pode ser automática conforme a demanda.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "INFORMÁTICA"
             },
             {
                 question: "💻 'Ransomware não pode ser propagado por phishing, mas bloqueia o acesso ao sistema.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO (pode ser propagado por phishing)
+                answer: 2,
                 category: "INFORMÁTICA"
             },
             {
                 question: "💻 'Rootkit permite ocultar a presença de outros malwares, mas é facilmente detectado.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO (é difícil de detectar)
+                answer: 2,
                 category: "INFORMÁTICA"
             },
             {
                 question: "💻 'No Explorador de Arquivos do Windows 10, é possível exibir arquivos ocultos e extensões de nomes.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "INFORMÁTICA"
             },
             
@@ -597,121 +596,121 @@
             {
                 question: "🏛️ 'A departamentalização por cliente tem como desvantagem a dificuldade na aplicação de mão de obra.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'A departamentalização funcional gera eficiência mediante especialização das atividades.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'Vida confortável, senso de autorrealização e equidade são exemplos de valores terminais da cultura organizacional.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'Na gestão pública, a geração de valor assegura a primazia do aumento do valor intangível sobre o tangível.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO
+                answer: 2,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'A análise interna no planejamento estratégico evidencia oportunidades e ameaças.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO (análise interna mostra forças e fraquezas)
+                answer: 2,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'A terceira etapa do ciclo PDCA associa-se à coleta de informações sobre resultados obtidos (verificar).'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO (Check)
+                answer: 1,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'A matriz de rastreabilidade de requisitos garante que cada requerimento adicione valor ao objetivo do projeto.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'Custos com refugos, retrabalhos e ações corretivas são custos da não conformidade.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'Maquetes, encenações, fluxogramas e impressões 3D adequam-se à etapa de prototipação do design thinking.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'A inteligência artificial é imune a falhas de controle.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO
+                answer: 2,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'Organizações contemporâneas adotam abordagens centradas no cargo nos processos de recrutamento.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO (foco em competências)
+                answer: 2,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'Treinamento e desenvolvimento podem aumentar a capacidade de entregar valor à organização.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'Competências devem ser trabalhadas isoladamente para reter talentos individuais.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO
+                answer: 2,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'Ambiente de trabalho agradável contribui para a motivação e alcance de objetivos.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'Gestão de desempenho se limita ao alcance de objetivos organizacionais.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO
+                answer: 2,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'O comportamento humano no trabalho decorre de características inatas e aprendizagem.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'Equipes autodirigidas são treinadas para desempenhar tarefas independentes.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'O ideal é a eliminação dos conflitos no ambiente de trabalho.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO
+                answer: 2,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'A gestão do conhecimento está mais vinculada a recursos tecnológicos que aos saberes das pessoas.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO
+                answer: 2,
                 category: "GESTÃO"
             },
             {
                 question: "🏛️ 'Qualidade de vida no trabalho abrange estrutura organizacional e sistemas de recompensas.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "GESTÃO"
             },
             
@@ -719,37 +718,37 @@
             {
                 question: "📑 'A planilha de custos é base para análise da exequibilidade da proposta de preços em serviços de limpeza.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "LICITAÇÕES"
             },
             {
                 question: "📑 'Resultados de instrumentos de aferição da qualidade não ensejam alteração dos valores pagos.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO
+                answer: 2,
                 category: "LICITAÇÕES"
             },
             {
                 question: "📑 'É vedado à administração federal celebrar convênios com entidades privadas sem fins lucrativos.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO
+                answer: 2,
                 category: "LICITAÇÕES"
             },
             {
                 question: "📑 'Órgãos não participantes devem demonstrar compatibilidade de valores para aderir à ata de registro de preços.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "LICITAÇÕES"
             },
             {
                 question: "📑 'O fiscal técnico pode aceitar justificativa para serviço com menor conformidade em caráter excepcional.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "LICITAÇÕES"
             },
             {
                 question: "📑 'Sanções em contratações públicas restringem-se a advertência, multa e impedimento de licitar.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO (inclui declaração de inidoneidade)
+                answer: 2,
                 category: "LICITAÇÕES"
             },
             
@@ -757,25 +756,25 @@
             {
                 question: "📦 'Itens natalinos apresentam demanda de natureza irregular.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "LOGÍSTICA"
             },
             {
                 question: "📦 'A curva ABC utiliza valores unitários dos estoques como critério de classificação.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO (utiliza valor total)
+                answer: 2,
                 category: "LOGÍSTICA"
             },
             {
                 question: "📦 'O método linear de depreciação é aceito pela Receita Federal.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "LOGÍSTICA"
             },
             {
                 question: "📦 'Na recusa parcial de material, é necessária nota fiscal de devolução.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "LOGÍSTICA"
             },
             
@@ -783,31 +782,31 @@
             {
                 question: "🔒 'Serviços de segurança privada de forma cooperada dependem de autorização do DPF.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "SEGURANÇA"
             },
             {
                 question: "🔒 'Atividades de vigilante exigem idade mínima de 21 anos e ensino médio.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "SEGURANÇA"
             },
             {
                 question: "🔒 'Em condomínios com segurança privada, é vedado usar animais na segurança.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO
+                answer: 2,
                 category: "SEGURANÇA"
             },
             {
                 question: "🔒 'Em agências bancárias, são necessários no mínimo dois vigilantes com colete balístico.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "SEGURANÇA"
             },
             {
                 question: "🔒 'Aprovação de uniformes e vistoria anual em instituições financeiras são competência da PF.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "SEGURANÇA"
             },
             
@@ -815,31 +814,31 @@
             {
                 question: "🔬 'Inquérito policial pode ser avocado por superior hierárquico mediante despacho fundamentado.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "INVESTIGAÇÃO"
             },
             {
                 question: "🔬 'É exigida autorização do DPF para importação de produtos químicos controlados.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "PRODUTOS QUÍMICOS"
             },
             {
                 question: "🔬 'Instituições de ensino são isentas da taxa de controle de produtos químicos.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "PRODUTOS QUÍMICOS"
             },
             {
                 question: "🔬 'Ministro da Justiça pode atualizar lista de produtos químicos controlados independentemente de proposta do DPF.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO
+                answer: 2,
                 category: "PRODUTOS QUÍMICOS"
             },
             {
                 question: "🔬 'Recursos da taxa de controle de produtos químicos constituem receita do FUNDA.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "PRODUTOS QUÍMICOS"
             },
             
@@ -847,31 +846,31 @@
             {
                 question: "🌎 'Expulsão é medida administrativa com impedimento de reingresso por prazo determinado.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "LEI DE MIGRAÇÃO"
             },
             {
                 question: "🌎 'Quando visto diplomático é transformado em autorização de residência, as prerrogativas do visto são mantidas.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO
+                answer: 2,
                 category: "LEI DE MIGRAÇÃO"
             },
             {
                 question: "🌎 'Brasileiro que se estabeleça no exterior, ainda que temporariamente, é considerado emigrante.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "LEI DE MIGRAÇÃO"
             },
             {
                 question: "🌎 'A independência nacional é princípio da política migratória brasileira.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "LEI DE MIGRAÇÃO"
             },
             {
                 question: "🌎 'Repatriação, deportação e expulsão coletivas são vedadas.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "LEI DE MIGRAÇÃO"
             },
             
@@ -879,19 +878,19 @@
             {
                 question: "🔫 'A localização de munições entre pessoas físicas é permitida com autorização do SINARM.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "ARMAS"
             },
             {
                 question: "🔫 'Importar arma de fogo sem autorização é crime, com pena aumentada se for de uso restrito.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 1, // CERTO
+                answer: 1,
                 category: "ARMAS"
             },
             {
                 question: "🔫 'Autorização para porte de arma de uso restrito é competência da PF, independentemente do SINARM.'",
                 options: ["CERTO", "ERRADO"],
-                answer: 2, // ERRADO
+                answer: 2,
                 category: "ARMAS"
             },
             
@@ -903,7 +902,7 @@
                 category: "PORTUGUÊS"
             },
             {
-                question: "📝 'No texto da prova, a palavra 'defeso' significa 'proibido'."",
+                question: "📝 'No texto da prova, a palavra 'defeso' significa 'proibido'.'",
                 options: ["CERTO", "ERRADO"],
                 answer: 1,
                 category: "PORTUGUÊS"
@@ -915,343 +914,4 @@
                 category: "IMPROBIDADE"
             },
             {
-                question: "⚖️ 'A posse em cargo público exige a apresentação de declaração de bens e valores.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 1,
-                category: "LEI 8.112"
-            },
-            {
-                question: "💻 'O protocolo HTTPS garante a criptografia dos dados transmitidos na internet.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 1,
-                category: "INFORMÁTICA"
-            },
-            {
-                question: "💻 'O firewall é um dispositivo de hardware ou software que controla o tráfego de rede.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 1,
-                category: "INFORMÁTICA"
-            },
-            {
-                question: "🏛️ 'A administração pública direta compreende os órgãos integrantes da estrutura dos poderes da União, Estados e Municípios.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 1,
-                category: "ADMINISTRAÇÃO"
-            },
-            {
-                question: "🏛️ 'A descentralização administrativa ocorre quando a administração pública distribui competências dentro da mesma pessoa jurídica.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 2,
-                category: "ADMINISTRAÇÃO"
-            },
-            {
-                question: "📑 'Na licitação, o princípio da vinculação ao instrumento convocatório impede que o edital seja alterado após a publicação.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 2,
-                category: "LICITAÇÕES"
-            },
-            {
-                question: "📑 'O pregão é modalidade de licitação para aquisição de bens e serviços comuns, independentemente do valor.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 1,
-                category: "LICITAÇÕES"
-            },
-            {
-                question: "🔒 'A segurança privada pode ser exercida por vigilantes, supervisores e chefes de equipe.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 1,
-                category: "SEGURANÇA"
-            },
-            {
-                question: "🔬 'A Lei 10.357/2001 dispõe sobre o controle de produtos químicos que podem ser utilizados na produção de drogas.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 1,
-                category: "PRODUTOS QUÍMICOS"
-            },
-            {
-                question: "🌎 'A Lei de Migração (13.445/2017) garante ao imigrante direitos e deveres similares aos do brasileiro.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 1,
-                category: "LEI DE MIGRAÇÃO"
-            },
-            {
-                question: "🔫 'O Sistema Nacional de Armas (SINARM) é vinculado à Polícia Federal.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 1,
-                category: "ARMAS"
-            },
-            {
-                question: "📊 'Em probabilidade, eventos mutuamente exclusivos não podem ocorrer simultaneamente.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 1,
-                category: "RACIOCÍNIO LÓGICO"
-            },
-            {
-                question: "📝 'A palavra 'pessimista' é um adjetivo e pode ser flexionada em gênero e número.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 1,
-                category: "PORTUGUÊS"
-            },
-            {
-                question: "⚖️ 'A comissão de ética pode aplicar a penalidade de censura ao servidor público.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 1,
-                category: "ÉTICA"
-            },
-            {
-                question: "📋 'O servidor público estável pode perder o cargo mediante processo administrativo disciplinar.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 1,
-                category: "LEI 8.112"
-            },
-            {
-                question: "💻 'No Excel, a função PROCV procura um valor na primeira coluna de uma tabela e retorna outro na mesma linha.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 1,
-                category: "INFORMÁTICA"
-            },
-            {
-                question: "🏛️ 'A governança pública envolve liderança, estratégia e controle.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 1,
-                category: "GESTÃO"
-            },
-            {
-                question: "📦 'O método PEPS (primeiro que entra, primeiro que sai) é um critério de avaliação de estoques.'",
-                options: ["CERTO", "ERRADO"],
-                answer: 1,
-                category: "LOGÍSTICA"
-            }
-        ];
-
-        const TOTAL_QUESTIONS = questions.length;
-        let current = 0;
-        let score = 0;
-        let answered = false;
-        let userAnswers = [];
-        let timer;
-        let timeLeft = 70; // 70 segundos por questão
-
-        function startTimer() {
-            clearInterval(timer);
-            timeLeft = 70;
-            updateTimerDisplay();
-            
-            timer = setInterval(() => {
-                timeLeft--;
-                updateTimerDisplay();
-                
-                if (timeLeft <= 0) {
-                    clearInterval(timer);
-                    if (!answered) {
-                        userAnswers.push(0);
-                        nextQuestion();
-                    }
-                }
-            }, 1000);
-        }
-
-        function updateTimerDisplay() {
-            const timerEl = document.getElementById('timer');
-            if (timerEl) timerEl.textContent = `⏳ ${timeLeft}s`;
-        }
-
-        function showQuestion() {
-            answered = false;
-            const q = questions[current];
-            
-            let html = `
-                <div class="quiz-header">
-                    <div class="quiz-title">PF - AGENTE ADMINISTRATIVO 2025</div>
-                    <div class="quiz-subtitle">SIMULADO CEBRASPE (C/E)</div>
-                    
-                    <div class="progress-container">
-                        <div class="question-counter">${current + 1}/${TOTAL_QUESTIONS}</div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: ${((current + 1) / TOTAL_QUESTIONS) * 100}%"></div>
-                        </div>
-                        <div class="category-badge">${q.category}</div>
-                    </div>
-                    
-                    <div class="timer-container">
-                        <div class="timer" id="timer">⏳ 70s</div>
-                    </div>
-                </div>
-                
-                <div class="question-area">
-                    <div class="question-text">${q.question}</div>
-                </div>
-                
-                <div class="options-container" id="optionsContainer">
-                    <button class="option-btn-ce" onclick="selectOption(1)" id="btn-c">C - CERTO</button>
-                    <button class="option-btn-ce" onclick="selectOption(2)" id="btn-e">E - ERRADO</button>
-                </div>
-            `;
-            
-            document.getElementById('quizContent').innerHTML = html;
-            startTimer();
-        }
-
-        function selectOption(selected) {
-            if (answered) return;
-            answered = true;
-            clearInterval(timer);
-            
-            const correct = questions[current].answer;
-            const btnC = document.getElementById('btn-c');
-            const btnE = document.getElementById('btn-e');
-            
-            // Remove classes anteriores
-            btnC.classList.remove('selected-c', 'correct-c', 'incorrect-c');
-            btnE.classList.remove('selected-e', 'correct-e', 'incorrect-e');
-            
-            // Marca o selecionado
-            if (selected === 1) {
-                btnC.classList.add('selected-c');
-            } else {
-                btnE.classList.add('selected-e');
-            }
-            
-            setTimeout(() => {
-                // Mostra resposta correta/incorreta
-                if (correct === 1) {
-                    btnC.classList.add('correct-c');
-                    if (selected !== 1) btnE.classList.add('incorrect-e');
-                } else {
-                    btnE.classList.add('correct-e');
-                    if (selected !== 2) btnC.classList.add('incorrect-c');
-                }
-                
-                btnC.disabled = true;
-                btnE.disabled = true;
-                
-                userAnswers.push(selected);
-                if (selected === correct) {
-                    score++;
-                    if (typeof confetti !== 'undefined') {
-                        confetti({
-                            particleCount: 20,
-                            spread: 40,
-                            colors: ['#0b2b3d', '#ffcc00']
-                        });
-                    }
-                }
-                
-                setTimeout(nextQuestion, 800);
-            }, 300);
-        }
-
-        function nextQuestion() {
-            current++;
-            if (current < questions.length) {
-                showQuestion();
-            } else {
-                showFinalScreen();
-            }
-        }
-
-        function showFinalScreen() {
-            let levelMessage = "";
-            let levelEmoji = "";
-            
-            if (score >= 100) {
-                levelMessage = "APROVADO - Excelente desempenho! 🌟";
-                levelEmoji = "🏆";
-                if (typeof confetti !== 'undefined') {
-                    confetti({ particleCount: 200, spread: 120, colors: ['#0b2b3d', '#ffcc00'] });
-                }
-            } else if (score >= 80) {
-                levelMessage = "CLASSIFICADO - Muito bem! 👍";
-                levelEmoji = "📚";
-                if (typeof confetti !== 'undefined') {
-                    confetti({ particleCount: 100, spread: 80, colors: ['#ffcc00'] });
-                }
-            } else if (score >= 60) {
-                levelMessage = "HABILITADO - Bom desempenho! 💪";
-                levelEmoji = "📝";
-            } else {
-                levelMessage = "ESTUDE MAIS - Continue praticando! 📖";
-                levelEmoji = "📖";
-            }
-            
-            let acertos = score;
-            let erros = TOTAL_QUESTIONS - score;
-            
-            let html = `
-                <div class="quiz-header">
-                    <div class="quiz-title">PF - AGENTE ADMINISTRATIVO</div>
-                    <div class="quiz-subtitle">RESULTADO FINAL</div>
-                </div>
-                
-                <div class="result-screen">
-                    <div class="final-score">
-                        <div class="score-label">Acertos</div>
-                        <div class="score-number">${acertos}/${TOTAL_QUESTIONS}</div>
-                        <div class="stats-container">
-                            <span class="stats-correct">✅ ${acertos} corretas</span>
-                            <span class="stats-wrong">❌ ${erros} incorretas</span>
-                        </div>
-                        <div class="level-result">${levelEmoji} ${levelMessage}</div>
-                    </div>
-                    
-                    <button class="action-btn" onclick="redirectToResultados()">
-                        🔗 VER GABARITO COMPLETO
-                    </button>
-                    
-                    <button class="action-btn secondary" onclick="redirectToConcurso()">
-                        🚀 MAIS SIMULADOS
-                    </button>
-                    
-                    <input type="text" class="name-input" id="participantName" 
-                           placeholder="Digite seu nome">
-                    <button class="action-btn secondary" onclick="sendResults()">
-                        💾 SALVAR RESULTADO
-                    </button>
-                </div>
-            `;
-            
-            document.getElementById('quizContent').innerHTML = html;
-        }
-
-        function redirectToResultados() {
-            window.open(CONCURSO_LINK, '_blank');
-        }
-
-        function redirectToConcurso() {
-            window.open(CONCURSO_LINK, '_blank');
-        }
-
-        function sendResults() {
-            const name = document.getElementById('participantName').value.trim();
-            if (!name) {
-                alert('Por favor, digite seu nome!');
-                return;
-            }
-            
-            document.getElementById('loading').style.display = 'flex';
-            
-            setTimeout(() => {
-                document.getElementById('loading').style.display = 'none';
-                alert(`Parabéns ${name}! Você acertou ${score}/${TOTAL_QUESTIONS} questões.`);
-            }, 1000);
-        }
-
-        // Carrega a biblioteca de confete e inicia o quiz
-        function loadConfettiAndStart() {
-            if (typeof confetti === 'undefined') {
-                const script = document.createElement('script');
-                script.src = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js';
-                script.onload = function() {
-                    showQuestion();
-                };
-                document.head.appendChild(script);
-            } else {
-                showQuestion();
-            }
-        }
-
-        // Inicia o quiz
-        loadConfettiAndStart();
-    </script>
-</body>
-</html>
+                question: "⚖️ 'A posse em cargo público exige a
